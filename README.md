@@ -1,4 +1,5 @@
 # MLDSA
+[![Go Reference](https://pkg.go.dev/badge/github.com/metacubex/mldsa.svg)](https://pkg.go.dev/github.com/metacubex/mldsa)
 
 backport mldsa for go1.20+
 
