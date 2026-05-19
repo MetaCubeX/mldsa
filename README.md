@@ -4,5 +4,5 @@
 backport mldsa for go1.20+
 
 export `crypto/mldsa` and `crypto/internal/fips140/mldsa` from:
-https://github.com/golang/go/blob/7bc111c6eb96bd7331f822d29c26b268212c841b/src/crypto/mldsa
-https://github.com/golang/go/tree/7bc111c6eb96bd7331f822d29c26b268212c841b/src/crypto/internal/fips140/mldsa
+https://github.com/golang/go/blob/c888fd67f00f77446e563f90e3307de7b6b3a910/src/crypto/mldsa
+https://github.com/golang/go/tree/c888fd67f00f77446e563f90e3307de7b6b3a910/src/crypto/internal/fips140/mldsa

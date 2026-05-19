@@ -155,10 +155,9 @@ func testGenerateKey(t *testing.T, params Parameters) {
 func TestAllocations(t *testing.T) {
 	// We allocate
 	//
-	//   - the PrivateKey (k and kk) and PublicKey (pk) structs
-	//   - their temporary inner structs (3x)
+	//   - the PrivateKey (k and kk) structs
+	//   - their temporary inner structs (2x)
 	//   - the public key (pkBytes) and signature (sig) byte slices
-	//   - the k.PublicKey() return value
 	//   - the Options argument to Sign
 	//
 	// on the heap. The structs are too large for the stack, the byte slices are

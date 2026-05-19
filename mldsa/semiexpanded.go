@@ -57,7 +57,7 @@ func TestingOnlyNewPrivateKeyFromSemiExpanded(sk []byte) (*PrivateKey, error) {
 	priv := &PrivateKey{pub: PublicKey{p: p}}
 	priv.k = K
 	priv.pub.tr = tr
-	A := priv.pub.a[:k*l]
+	A := priv.a[:k*l]
 	computeMatrixA(A, ρ[:], p)
 	for r := 0; r < l; r++ {
 		priv.s1[r] = ntt(s1[r])
@@ -110,7 +110,7 @@ func TestingOnlyNewPrivateKeyFromSemiExpanded(sk []byte) (*PrivateKey, error) {
 	if computePublicKeyHash(pk) != tr {
 		return nil, errors.New("mldsa: semi-expanded private key inconsistent with public key hash")
 	}
-	computeT1Hat(priv.pub.t1[:k], t1) // NTT(t₁ ⋅ 2ᵈ)
+	computeT1Hat(priv.t1[:k], t1) // NTT(t₁ ⋅ 2ᵈ)
 
 	return priv, nil
 }
